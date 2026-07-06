@@ -1,0 +1,64 @@
+:root {
+  --color-bg-canvas: oklch(14.57% 0.0043 285.86);
+  --color-ink-primary: oklch(92.81% 0.007 88.645);
+  --color-ink-dim: oklch(64.8% 0.0134 296.2);
+  --color-ink-faint: oklch(45.06% 0.0131 297.31);
+}
+
+@media (prefers-color-scheme: light) {
+  :root {
+    --color-bg-canvas: oklch(96.73% 0.007 88.643);
+    --color-ink-primary: oklch(20.59% 0.0059 285.87);
+    --color-ink-dim: oklch(48.33% 0.0144 296.04);
+    --color-ink-faint: oklch(64.47% 0.0134 296.2);
+  }
+}
+
+* {
+  box-sizing: border-box;
+}
+
+html,
+body {
+  height: 100%;
+}
+
+body {
+  margin: 0;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  background: var(--color-bg-canvas);
+  color: var(--color-ink-primary);
+  font-family: "Space Grotesk", system-ui, sans-serif;
+  letter-spacing: -0.01em;
+}
+
+main {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 1.25rem;
+  padding: 2rem;
+  text-align: center;
+}
+
+.logo {
+  width: clamp(160px, 22vw, 260px);
+  height: auto;
+}
+
+footer {
+  position: fixed;
+  bottom: 1.5rem;
+  font-size: 0.8rem;
+}
+
+footer a {
+  color: var(--color-ink-faint);
+  text-decoration: none;
+}
+
+footer a:hover {
+  color: var(--color-ink-dim);
+}
